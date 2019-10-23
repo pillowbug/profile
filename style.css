@@ -1,4 +1,4 @@
-/* css reset */ 
+/* css reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -8,65 +8,153 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /*reset end*/
 
 h1, h2, h3, h4, h5, p { font-family: Heebo, Arial, sans-serif; color: #575F7D; }
-
+h1 { font-family: 'Abril Fatface', cursive; }
+h2 { font-family: 'Abril Fatface', cursive; }
 body { background: #f0f8ff; text-align: center; }
-.content-block { width: 700px; height: auto; background: white;  margin: 40px auto; border-radius: 10px; }
-.body-section { margin: 20px 0 20px 0; padding: 20px; box-shadow: 0px 10px 30px rgba(0,0,0,0.1); }
-.body-section h1 { font-size: 36px; padding: 20px;}
-.body-section p { font-size: 18px; padding: 20px; }
-.profile-picture { border-radius: 50%; width: 25%; height: auto; margin: 0 auto; }
+p { line-height: 1.2em }
+
+/* z-indexes */
+.z1 {z-index: 1;}
+.z2 {z-index: 2;}
+.z3 {z-index: 3;}
+.z99 {z-index: 99;}
+
+/* FLOATS BAYBEE */
+.float20 { float: left; width: 20%;}
+.float25 { float: left; width: 25%;}
+.float33 { float: left; width: 33.3333%;}
+.float40 { float: left; width: 40%;}
+.float50 { float: left; width: 50%;}
+.float60 { float: left; width: 60%;}
+.float66 { float: left; width: 66.6667%;}
+.float75 { float: left; width: 75%;}
+.float80 { float: left; width: 80%;}
+.inline20 { display: inline-block; width: 20%; margin-right: -4px; }
+.inline25 { display: inline-block; width: 25%; margin-right: -4px; }
+.inline33 { display: inline-block; width: 33.3333%; margin-right: -4px; }
+.inline50 { display: inline-block; width: 50%; margin-right: -4px; }
+.inline66 { display: inline-block; width: 66.6666%; margin-right: -4px; }
+.inline-top {vertical-align: top;}
+.inline-middle {vertical-align: middle;}
+
+.content { max-width: 1200px; margin: 0 auto; }
+
+/* micro clearfix below. contains floats like .clearfix. */
+.cf:before, .cf:after { content: " ";display: table; }
+.cf:after {  clear: both; }
+/* need to clear floats instead of contain them? use this below. */
+.clear, .clear-both {  clear: both; }
+
+/* header */
+header { display: flex; align-items: center; width: 100vw; height: 60px; text-align:left; }
+header p { font-family: 'Abril Fatface', cursive; margin-left: 5em; }
+
+
+/* full width hero */
+.hero { width: 100vw; height: 600px; background-image: url(images/kissy.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; display: flex; justify-content: center; align-items: center; }
+/* .top-gradient:before {content:''; height: 100%; top:0;width: 100%; position: absolute; display: block; background-image:linear-gradient(90deg, rgba(191,0,0,0.5), rgba(242,157,53,0.5));} */
+.hero-inner { margin: 0 auto; }
+.hero-inner h1 { font-size: 72px; color: #FFFFFF; padding: 72px 72px 0 72px; animation: fadeIn ease 1s; }
+
+@keyframes fadeIn{
+  0% { opacity:0; }
+  100% { opacity:1;}
+  }
+
+
+.hero-inner p {font-size: 24px; color: white; padding: 32px; margin-bottom: 64px; animation: fadeIn ease 2s; }
+@keyframes fadeIn{
+  0% { opacity:0; }
+  100% { opacity:1;}
+  }
+.hero-inner a { width: 80px; height: 120px; background-color: #fff1c1; padding: 32px; border-radius: 50px; text-decoration: none; font-size: 24px; font-family: 'Abril Fatface', cursive; color: #293462;}
+
+/* body content */
+.threes { background-color: #216583; height: 320px; display: flex; justify-content: center; align-items: center; }
+.threes .div { border-top: 1px solid transparent; box-sizing: border-box; }
+.threes .div:hover { border-top: 1px solid #fff;}
+.background-stripe{position: absolute;width: 100vw;height: 53%; z-index: -1;left: 0;top: 540px;background-color: #216583;}
+
+.threes p { color: white; font-size: 18px; padding: 20px; }
+.fa-comments-dollar:before { font-size: 75px; color: white; }
+.fa-business-time:before { font-size: 75px; color: white; }
+.fa-hotdog:before { font-size: 75px; color: white; }
+
+
+.mission-statement { height: 480px; display: flex; justify-content: center; align-items: center; }
+.mission-statement p { font-size: 18px; padding: 36px; display: inline-block; vertical-align: 50%; }
+.mission-content h2 { font-size: 32px;  }
+.pull-quote { height: 480px; display: flex;  align-items: center; }
+.quote { padding: 20px;}
+.quote h2 { color:#293462; font-size: 64px; text-align: left; }
+.quote p { font-size: 18px; text-align: left; margin-top: 24px;  }
+
+
+.shameless-plugs { height: 500px; width: 80%; margin: 0 auto;}
+.shameless-plugs h2 { padding: 100px; font-size: 36px;}
+.content-block { width: 900px; height: 500px; background: white;  margin: 40px auto; border-radius: 10px; display: inline-block; box-shadow: 0 0 40px 0 rgba(21,130,203,0.17); }
+.social-links { width: 100%; display: inline-block; text-align: center; }
+.shameless-plugs p { margin-top: 1.5em; }
+.fa-facebook:before { font-size: 75px; color: #f76262; margin-bottom: 2em; }
+.fa-instagram:before { font-size: 75px; color: #f76262; margin-bottom: 2em;  }
+.fa-spotify:before { font-size: 75px; color: #f76262; margin-bottom: 2em;  }
+
 
 /*media queries*/
 
-@media (max-width: 960px) {
-	.content-block { width: 700px; }
-	.body-section { margin: 10px 0; padding: 10px; }
+@media (max-width: 925px) {
+  .hero-inner h1 {
+    font-size: 56px;
   }
-  @media (max-width: 720px) {
-	.content-block\ { width: 500px; }
-	.body-section h1 { font-size: 24px; padding: 10px;}
-	.body-section p { font-size: 16px; padding: 20px; }
-  }
-  @media (max-width: 540px) {
-	.content-block { width: 300px; }
-	/* .body-section h1 { font-size: 24px; padding: 10px;} */
-	/* .body-section p { font-size: 16px; padding: 20px; } */
-  }
+}
+@media (max-width: 650px) {
+.content-block { width: 500px; }
+.float33 { display: block; float: none; width: 100%; }
+.hero-inner a { padding: 24px; }
+.float50 {display: block; float: none; width: 100%;}
+}
+
+@media (max-width: 550px) {
+  .hero-inner h1 {font-size: 36px;}
+.content-block { width: 300px; }
+/* .body-section h1 { font-size: 24px; padding: 10px;} */
+/* .body-section p { font-size: 16px; padding: 20px; } */
+}
