@@ -89,7 +89,7 @@ header p { font-family: 'Abril Fatface', cursive; margin-left: 5em; }
 
 
 /* full width hero */
-.hero { width: 100vw; height: 600px; background-image: url(images/kissy.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; display: flex; justify-content: center; align-items: center; }
+.hero { width: 100vw; height: 600px; background-image: url(kissy.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; display: flex; justify-content: center; align-items: center; }
 /* .top-gradient:before {content:''; height: 100%; top:0;width: 100%; position: absolute; display: block; background-image:linear-gradient(90deg, rgba(191,0,0,0.5), rgba(242,157,53,0.5));} */
 .hero-inner { margin: 0 auto; }
 .hero-inner h1 { font-size: 72px; color: #FFFFFF; padding: 72px 72px 0 72px; animation: fadeIn ease 1s; }
